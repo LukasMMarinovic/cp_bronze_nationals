@@ -30,11 +30,41 @@
 
 import java.awt.*;
 import java.applet.*;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class Lab10vst extends Applet
 {
-   public void paint(Graphics g)
+  public void init()
+  {  
+  //play music
+   try
    {
-      
+      AudioInputStream audioInputStream =
+      AudioSystem.getAudioInputStream(
+      this.getClass().getResource("jazzinparis.wav"));
+      Clip clip = AudioSystem.getClip();
+      clip.open(audioInputStream);
+      clip.start();
    }
+   catch(Exception ex)
+   {
+   
+   }      
+  }
+   public void update(Graphics g)
+   {
+   paint(g); 
+   }      
+   
+   public void paint(Graphics g)
+   { 
+   //Draw components
+   setSize(800,600);
+   background.drawBackground(g);
+   } 
+   
 }
