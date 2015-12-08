@@ -1,9 +1,40 @@
-// Lab10vst.java
+//|=======================}//
+//| Lab10vst.java         |//
+//|                       |//
+//| This program displays |//
+//| a scene using Java    |//
+//| graphics...again      |//
+//|                   bleh|//
+//|=======================|//
 
-// The Lab10 graded assignment is open ended.
-// There is no provided student version for starting, nor are there
-// any files with solutions for the different point versions.
+//|=================================================|//
+//|Scratch-A-Bear inc.                              |//
+//|                                                 |//
+//|please visit:                                    |//
+//|      http://www.scratch-a-bear.edu              |//
+//|                                                 |//
+//|Developers:                                      |//
+//|      Vijaysrinivas Rajagopal                    |//
+//|         https://github.com/MedicAlert           |//
+//|      Lukas Marinovic                            |//
+//|         https://github.com/LukasMMarinovic      |//
+//|      Alejandro Scroggs                          |//
+//|         https://github.com/handroishonda        |//
+//|=================================================|//
 
-// Check the Lab assignment document for additional details.
+/*
+   note about how much this class sucks and proposal for new teaching strats 
+   
+*/
 
 
+import java.awt.*;
+import java.applet.*;
+
+public class Lab10vst extends Applet
+{
+   public void paint(Graphics g)
+   {
+      
+   }
+}
