@@ -9,12 +9,12 @@ class Building
    private int width;
    private int height;
    
-   public Building(Graphics g, int max, int min)
+   public Building(Graphics g, int max, int min, int width, int height)
    {
       x = (int) ((Math.random() * (max - min)) + min);
       y = (int) ((Math.random() * (max - min)) + min);
-      width = 300;
-      height = 800;
+      this.width = width;
+      this.height = height;
       g.setColor(new Color(0,0,0));
       g.fillRect(x, y, width, height);   
    }
@@ -46,8 +46,30 @@ class CustomBuild extends Building
    
    public void addTop(Graphics g, int exceed, int self_height)
    {
+      g.setColor(new Color(100,0,0));
+      g.fillRect((get_x() + exceed), get_y()-self_height, (get_width() - 30), self_height);
+      g.fillRect((get_x() + exceed + 10), get_y()-self_height , 3, 10);
+   }
+   
+   public void addWaterTower(Graphics g, int exceed)
+   {
       g.setColor(new Color(0,0,0));
-      g.fillRect((get_x() + exceed), get_y(), (get_width() - 30), self_height);
-      g.fillRect((get_x() + exceed + 10), get_y(), 3, 10);
+      //legs
+      g.fillRect(get_x(), get_y(), 3, 10);
+      g.fillRect(get_x(), get_y(), 3, 10);
+      //body
+      g.fillRect(get_x(), get_y(), 30, 35);
+      //top
+      Polygon top = new Polygon();
+      top.addPoint(get_x(), get_y());
+      top.addPoint(get_x() + 30, get_y());
+      top.addPoint(get_x() + 15, get_y() + 15);
+      g.fillPolygon(top);
+      
    }
 }
+
+class CityLine()
+{
+   
+]

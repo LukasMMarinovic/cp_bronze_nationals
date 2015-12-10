@@ -65,6 +65,16 @@ public class Lab10vst extends Applet
    //Draw components
    setSize(800,600);
    background.drawBackground(g);
+   CustomBuild cus = new CustomBuild(g, 300, 200);
+   cus.addTop(g, 10, 30);
+   repaint();
+   try
+      {
+         Thread.sleep(100);
+      }
+   catch(Exception ex)
+      {
+      }
    } 
    
 }
