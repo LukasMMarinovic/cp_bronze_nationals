@@ -63,7 +63,7 @@ public class Lab10vst extends Applet
    public void paint(Graphics g)
    { 
    //Draw components
-   setSize(800,600);
+   setSize(1000,500);
    background.drawBackground(g);
    CustomBuild cus = new CustomBuild(g, 300, 200);
    cus.addTop(g, 10, 30);
