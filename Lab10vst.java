@@ -81,8 +81,13 @@ public class Lab10vst extends Applet
    setSize(1000,500);
    background.drawBackground(g);
    
+   //needs to compose the "subway class"
    Window.drawwindow(g);
-     
+   Bench.drawBench(g);
+   Details.drawPole(g); 
+   
+   //this is broken
+   
    /*CustomBuild cus = new CustomBuild(g, 300, 200);
    cus.addTop(g, 10, 30);
    repaint();

@@ -15,7 +15,7 @@ public static void drawwindow(Graphics g)
    g.fillRect(0,330,1000,500);
    //draw top
    g.fillRect(0,0,1000,80);
-   
+
    
    //top left corner
    Polygon tl = new Polygon();
@@ -56,5 +56,7 @@ public static void drawwindow(Graphics g)
    //draw floor
    g.setColor(new Color(110,110,110));
    g.fillRect(0,460,1000,500);
+   g.fillRect(0,0,1000,25);
+   
 }
 }
