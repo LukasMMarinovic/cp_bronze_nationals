@@ -12,10 +12,10 @@ class Building
    public Building(Graphics g, int max, int min, int width, int height)
    {
       x = (int) ((Math.random() * (max - min)) + min);
-      y = (int) ((Math.random() * (max - min)) + min);
+      y = (int) ((Math.random() * (300 - 100)) + 100);
       this.width = width;
       this.height = height;
-      g.setColor(new Color(0,0,0));
+      g.setColor(Primitives.randColor());
       g.fillRect(x, y, this.width, this.height);   
    }
    
@@ -50,7 +50,7 @@ class CustomBuild extends Building
       int holderx = get_x();
       int holdery = get_y();
             
-      g.setColor(new Color(100,0,0));
+      g.setColor(Primitives.randColor());
       g.fillRect(holderx + exceed, holdery - height, get_width() - exceed*2, height);
    }
    
@@ -72,7 +72,7 @@ class CustomBuild extends Building
       int rany = (int)((Math.random() * (35 - 19)) + 19);
       int ranx = (int) ((Math.random() * (30 - 15)) + 15);
       
-      g.setColor(new Color(0,0,0));
+      g.setColor(Primitives.randColor());
       //legs
       g.fillRect(tempx + margin, tempy + rany, 3, 10);
       g.fillRect(tempx + margin + (ranx / 2), tempy + rany, 3, 10);
@@ -88,17 +88,48 @@ class CustomBuild extends Building
    
    public void addAnt(Graphics g, int length) 
    {
-      g.setColor(new Color(0,0,0));
+      g.setColor(Primitives.randColor());
       g.fillRect(get_x()+ (get_x()/3), get_y()-length, 2, length);
    }
 }
 
+
+//Creates acutal city skyline
 class CityLine
 {
    public CityLine(Graphics g)
    {
-   int width = ((int)Math.random()) + 200; 
-   int height = ((int)Math.random()) + 400;
-   CustomBuild cs = new CustomBuild(g, 100, 300, width, height);
-   }  
+   
+   int type, width, height, padd;
+   CustomBuild cs;
+   
+   for(int i = 0; i <= 5; i++)
+      {
+         type = (int)((Math.random()*(3-1)) + 1);         
+         padd = (int)((Math.random() * (300-100)) + 100);
+         System.out.println(padd);
+         switch(type)
+         {
+            case 1:
+               width = ((int)Math.random()) + 100; 
+               height = ((int)Math.random()) + 250;               
+               int ran_fac = (int) ((Math.random()*(5-2)) + 2);            
+               cs = new CustomBuild(g, 500+padd, 100, width, height);
+               cs.addSteeple(g,4,ran_fac);
+               while(cs.get_x() < 0)
+               {
+                  
+               } 
+            case 2:
+               width = ((int)Math.random()) + 100; 
+               height = ((int)Math.random()) + 250;
+               cs = new CustomBuild(g, 200+padd, 100, width, height);
+               
+            case 3:
+               width = ((int)Math.random()) + 100; 
+               height = ((int)Math.random()) + 250;
+               cs = new CustomBuild(g, 350+padd, 100, width, height);
+         }
+      }
+   } 
 }
