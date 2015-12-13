@@ -3,7 +3,7 @@ import java.applet.*;
 
 class background
 {
-   public static void drawBackground(Graphics g)
+   public static void Background(Graphics g)
    {
       g.setColor(new Color(255,144,84));
       g.fillRect(0,0,1000,500);
@@ -20,6 +20,8 @@ class background
          int yc = (int)(Math.random() * 500) + 0;
 
          g.fillRect(xc,yc,1,1);
-      }   
+      } 
+  
    }
+   
 }
