@@ -26,14 +26,14 @@ public static void drawOriginalJokes(Graphics g)
    g.setColor(new Color(110,110,110));
    g.drawString("WANTED: ",295,45);
     
-   fontSize = 5;
+   fontSize = 4;
    g.setFont(new Font("Stencil", Font.PLAIN, fontSize));    
-   g.drawString("lukas is a stupid poopoo loser",295,52);      //illegible text
-   g.drawString("vijay sucks fat juicy hairy dongs",295,56);
+   g.drawString("vijay loooooves to listen to adele",295,52);      //illegible text
+   g.drawString("lukas marinovic likes romantic comedies",295,56);
    g.drawString("vijay and lukas sitting in a tree",295,60);
-   g.drawString("F U C K I N G, cuz they are gay",295,64);
-   g.drawString("first comes love, then STD's",295,68);
-   g.drawString("then comes Handro with big peepee",295,72);
+   g.drawString("i want new lab partners pretty please",295,64);
+   g.drawString("does't appreciate our really dank humor",295,68);
+   g.drawString("GG we win we get a 100 on the lab grade",295,72);
    
    fontSize = 38;
    g.setFont(new Font("Stencil", Font.PLAIN, fontSize));   //wanted semicolon
