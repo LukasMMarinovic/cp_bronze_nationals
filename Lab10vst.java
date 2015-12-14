@@ -22,11 +22,6 @@
 //|         https://github.com/handroishonda        |//
 //|=================================================|//
 
-/*
-   note about how much this class sucks and proposal for new teaching strats 
-   
-*/
-
 
 import java.awt.*;
 import java.applet.*;

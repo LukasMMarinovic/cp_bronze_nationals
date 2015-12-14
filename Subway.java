@@ -9,13 +9,20 @@ class Subway
       Window.drawwindow(g);
       Bench.drawBench(g);
       Details.drawPole(g);
-      Ads.drawOriginalJokes(g);
-      Ads.drawSecondOriginalJoke(g);
+      Ads.drawAds(g);
    }
 }
 
-
 class Ads
+{
+public static void drawAds(Graphics g)
+{
+      //this is composition v
+      Ad1.drawOriginalJokes(g);
+      Ad2.drawSecondOriginalJoke(g);
+}
+}
+class Ad1
 {
 public static void drawOriginalJokes(Graphics g)
 {
@@ -43,7 +50,9 @@ public static void drawOriginalJokes(Graphics g)
    g.drawRect(395,33,40,36);
   
 }
-
+}
+class Ad2
+{
 public static void drawSecondOriginalJoke(Graphics g)
 {
    g.setColor(new Color(120,120,120));
@@ -56,8 +65,8 @@ public static void drawSecondOriginalJoke(Graphics g)
    g.drawString("COME TO THE JAVA CAFE!",600,67);
    
 }
-
 }
+
 class Details
 {
    public static void drawPole(Graphics g)
