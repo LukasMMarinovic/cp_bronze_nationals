@@ -72,6 +72,7 @@ public class Lab10vst extends Applet
    background.Background(g);
    CityLine cs = new CityLine(g);
    Subway.drawSubway(g);
+   PeopleOnDaSubway.standingGuy(g);
    
    repaint();
    try
