@@ -10,6 +10,7 @@ class Subway
       Bench.drawBench(g);
       Details.drawPole(g);
       Ads.drawOriginalJokes(g);
+      Ads.drawSecondOriginalJoke(g);
    }
 }
 
@@ -45,6 +46,14 @@ public static void drawOriginalJokes(Graphics g)
 
 public static void drawSecondOriginalJoke(Graphics g)
 {
+   g.setColor(new Color(120,120,120));
+   g.fillRect(560,30,235,45);                //java cafe background
+   
+   int fontSize = 12;
+   g.setColor(new Color(225,245,245));
+   g.setFont(new Font("ComicSansMC", Font.PLAIN, fontSize));
+   g.drawString("Do you want a method to get out of class?",565,45);
+   g.drawString("COME TO THE JAVA CAFE!",600,67);
    
 }
 
