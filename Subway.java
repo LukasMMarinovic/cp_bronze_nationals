@@ -21,20 +21,30 @@ public static void drawOriginalJokes(Graphics g)
    g.setColor(new Color(245,245,245));        //newspaper background
    g.fillRect(290,30,150,43);
 
-   int fontSize = 15;
-   g.setFont(new Font("TimesRoman", Font.PLAIN, fontSize));   //actual word "wanted"
+   int fontSize = 19;
+   g.setFont(new Font("Stencil", Font.PLAIN, fontSize));   //actual word "wanted"
    g.setColor(new Color(110,110,110));
    g.drawString("WANTED: ",295,45);
     
-   fontSize = 4;
-   g.setFont(new Font("TimesRoman",Font.PLAIN, fontSize));     //illegible text
-   g.drawString("lukas is a stupid poopoo loser",300,52);
-   g.drawString("vijay sucks fat juicy hairy dongs",300,56);
-   g.drawString("vijay and lukas sitting in a tree",300,60);
-   g.drawString("F U C K I N G, cuz they are gay",300,64);
-   g.drawString("first comes love, then STD's",300,68);
-   g.drawString("then comes Handro with a big peepee",300,72);
+   fontSize = 5;
+   g.setFont(new Font("Stencil", Font.PLAIN, fontSize));    
+   g.drawString("lukas is a stupid poopoo loser",295,52);      //illegible text
+   g.drawString("vijay sucks fat juicy hairy dongs",295,56);
+   g.drawString("vijay and lukas sitting in a tree",295,60);
+   g.drawString("F U C K I N G, cuz they are gay",295,64);
+   g.drawString("first comes love, then STD's",295,68);
+   g.drawString("then comes Handro with big peepee",295,72);
    
+   fontSize = 38;
+   g.setFont(new Font("Stencil", Font.PLAIN, fontSize));   //wanted semicolon
+   g.drawString(";",410,60);
+   g.setColor(new Color(120,120,120));         //box around the suspect
+   g.drawRect(395,33,40,36);
+  
+}
+
+public static void drawSecondOriginalJoke(Graphics g)
+{
    
 }
 
