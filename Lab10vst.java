@@ -72,26 +72,18 @@ public class Lab10vst extends Applet
    }        
    public void paint(Graphics g)
    { 
-   
-   
-   
-   
-   
    //Draw components
    setSize(1000,500);
    background.Background(g);
+   CityLine cs = new CityLine(g);
    Subway.drawSubway(g);
    
-
-   
-   /*CustomBuild cus = new CustomBuild(g, 300, 200);
-   cus.addTop(g, 10, 30);
    repaint();
    try
       {
          Thread.sleep(100);
       }
-   catch(Exception ex)*/
+   catch(Exception ex)
       {
       }
    } 
